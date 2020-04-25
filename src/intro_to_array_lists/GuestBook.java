@@ -53,14 +53,17 @@ public class GuestBook implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource()==newName) {
 			String name =JOptionPane.showInputDialog("Add a name to the Guest Book");
-			names.add("Guest #"+ (names.size()+1)+ ":" + name);
+			names.add("Guest #"+ (names.size()+1)+ ": " + name);
+			
 		}
 		
 		
 		if(e.getSource()==viewNames) {
+			String list = "";
 			for(String s: names) {
-				
+			list+=s+"\n";
 			}
+			JOptionPane.showMessageDialog(null, list);
 		}
 	}
 	
